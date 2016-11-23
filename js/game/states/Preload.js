@@ -6,23 +6,20 @@ Template.Preload = function() {
 Template.Preload.prototype = {
 
     preload: function() {
-        this.preloadbar = this.add.sprite(this.game.world.centerX, this.game.world.centerY+ 128, "preloadBar");
-        console.log("preloadbar is : " + this.preloadbar);
-        this.preloadbar.anchor.setTo(0.5);
 
-        this.load.setPreloadSprite(this.preloadbar);
 
         // here you load all the game images and what not
 
 
-        this.load.image('peach', "assests/images/peach.gif");
-         this.load.image("logo", "assests/images/mimkyu.png");
+        this.load.image('player', "assets/images/sprite1.png");
+         this.load.image("logo", "assets/images/fate.png");
+         this.load.image('background', 'assets/images/sky.jpg');
 
 
     },
     create: function() {
-        console.log("preload bar is: "+this.preloadbar);
-        this.preloadbar.cropEnabled = true;
+        //console.log("preload bar is: "+this.preloadbar);
+        //this.preloadbar.cropEnabled = true;
     },
 
     update: function() {
