@@ -8,15 +8,15 @@ Template.Boot.prototype = {
         // use your own images;
 
         //this.load.image("logo", "assests/images/logo.png");
-        this.load.image("preloadBar", "assests/images/preloader-bar.png");
+        //this.load.image("preloadBar", "assests/images/preloader-bar.png");
 
     },
     create: function() {
         this.game.stage.backgroundColor = "fff";
-        
+
         //how many fingers/ clickers you want
         this.input.maxPointers=1;
-        
+
         if (this.game.device.desktop) {
             this.scale.pageAlignHorizontally = true;
         }
@@ -30,7 +30,7 @@ Template.Boot.prototype = {
             this.scale.pageAlignHorizontally= true;
             this.scale.setScreenSize(true);
         }
-        // this a all the game configurations 
+        // this a all the game configurations
         // now begins the loading of the actual game assests
         //this commanf will move the game on to the next statea
         console.log("about to go to preload");

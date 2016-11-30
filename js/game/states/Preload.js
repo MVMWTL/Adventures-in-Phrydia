@@ -6,17 +6,13 @@ Template.Preload = function() {
 Template.Preload.prototype = {
 
     preload: function() {
-        this.preloadbar = this.add.sprite(this.game.world.centerX, this.game.world.centerY+ 128, "preloadBar");
-        console.log("preloadbar is : " + this.preloadbar);
-        this.preloadbar.anchor.setTo(0.5);
 
-        this.load.setPreloadSprite(this.preloadbar);
 
         // here you load all the game images and what not
 
 
-        this.load.image('peach', "assets/images/peach.gif");
-        //this.load.image("logo", "assets/images/mimkyu.png");
+        this.load.image('player', "assets/images/sprite1.png");
+
         this.load.image("background", "assets/images/backgrounds-3.jpg");
         this.load.image("settings", "assets/images/settings.png");
         this.load.image("start", "assets/images/startbutton.png");
@@ -25,8 +21,8 @@ Template.Preload.prototype = {
 
     },
     create: function() {
-        console.log("preload bar is: "+this.preloadbar);
-        this.preloadbar.cropEnabled = true;
+        //console.log("preload bar is: "+this.preloadbar);
+        //this.preloadbar.cropEnabled = true;
     },
 
     update: function() {
