@@ -15,8 +15,12 @@ Template.Preload.prototype = {
         // here you load all the game images and what not
 
 
-        this.load.image('peach', "assests/images/peach.gif");
-         this.load.image("logo", "assests/images/mimkyu.png");
+        this.load.image('peach', "assets/images/peach.gif");
+        //this.load.image("logo", "assets/images/mimkyu.png");
+        this.load.image("background", "assets/images/backgrounds-3.jpg");
+        this.load.image("settings", "assets/images/settings.png");
+        this.load.image("start", "assets/images/startbutton.png");
+        this.load.image("store","assets/images/Storebutton.png")
 
 
     },
