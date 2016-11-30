@@ -12,8 +12,10 @@ Template.Preload.prototype = {
 
 
         this.load.image('player', "assets/images/sprite1.png");
-         this.load.image("logo", "assets/images/fate.png");
-         this.load.image('background', 'assets/images/sky.jpg');
+        this.load.image("background", "assets/images/backgrounds-3.jpg");
+        this.load.image("settings", "assets/images/settings.png");
+        this.load.image("start", "assets/images/startbutton.png");
+        this.load.image("store","assets/images/Storebutton.png")
 
 
     },

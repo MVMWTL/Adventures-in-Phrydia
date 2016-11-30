@@ -5,10 +5,12 @@ const speedX = 500;
 
 //object prototype i.e. what contains all object info
 Template.Game.prototype = {
+
     create: function() {
         this.game.stage.backgroundColor = "fff";
         // This function is called after the 'preload' function
         // Here we set up the game, display sprites, etc.
+
 
         // change background color.
         this.game.stage.backgroundColor = '#3498db'
