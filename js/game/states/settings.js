@@ -6,15 +6,3 @@ Template.Settings.prototype = {
 
     }
   };
-  <!DOCTYPE html>
-    <html>
-        <head>
-settings page
-        </head>
-
-        <body>
-
-"this will be a settings page when i make it"
-        </body>
-
-   </html>

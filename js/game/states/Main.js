@@ -13,5 +13,5 @@ game.state.add('Game',Template.Game);
 
 //starts the Boot game state
 //console.console.log("WTF IS GOING ON");
-game.state.start('Boot');
+game.state.start('Preload');
 //game.state.start('preload');

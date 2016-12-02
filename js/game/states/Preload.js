@@ -12,6 +12,7 @@ Template.Preload.prototype = {
 
 
         this.load.image('player', "assets/images/sprite1.png");
+        this.load.image('sprite', "assets/images/sprite.jpg");
 
         this.load.image("background", "assets/images/backgrounds-3.jpg");
         this.load.image("settings", "assets/images/settings.png");
@@ -26,7 +27,7 @@ Template.Preload.prototype = {
     },
 
     update: function() {
-        console.log("about to go to to main menu")
+        console.log("about to go to main menu")
        this.state.start('MainMenu');
     },
 
