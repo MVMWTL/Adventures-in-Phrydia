@@ -19,6 +19,10 @@ Template.Game.prototype = {
         this.player.body.collideWorldBounds = true;
         this.textbox("HELLO!");
         this.setupTextbox();
+
+        // add sprite sprite
+        this.sprite = this.game.add.sprite(500, 300, 'sprite');
+        this.sprite.scale.setTo(.25);
     },
     update: function() {
         const left = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
@@ -26,7 +30,6 @@ Template.Game.prototype = {
         const up = game.input.keyboard.isDown(Phaser.Keyboard.UP);
         const down = game.input.keyboard.isDown(Phaser.Keyboard.DOWN);
 
-        //CONTROLSFORKEYBOARDLEFTANDWRITE(rihjt)
         if (left) {
             this.player.body.velocity.x = -1*speedX;
         } else if (right) {
