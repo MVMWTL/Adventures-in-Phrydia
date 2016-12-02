@@ -1,6 +1,6 @@
 //creating a game object
 
-var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '');
+var game = new Phaser.Game(600, 400, Phaser.AUTO, '');
 
 //adding the games states that the game will have
 game.state.add('Boot', Template.Boot);

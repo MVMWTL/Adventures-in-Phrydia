@@ -14,11 +14,11 @@ Template.Game.prototype = {
         this.game.stage.backgroundColor = '#3498db'
 
         //adding sprites
-        this.player = this.game.add.sprite(100, 300, 'player');
+        this.player = this.game.add.sprite(400, 150, 'player');
         game.physics.enable(this.player, Phaser.Physics.ARCADE);
         this.player.body.collideWorldBounds = true;
-        this.player.body.gravity.y = 800;
-        console.log(Object.keys(Phaser.Keyboard));
+        this.textbox("HELLO!");
+        this.setupTextbox();
     },
     update: function() {
         const left = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
@@ -34,13 +34,30 @@ Template.Game.prototype = {
         } else {
             this.player.body.velocity.x = 0;
         }
+    },
+    textbox: function(text) {
+      console.log(text);
 
-        if (up) {
-            console.log("yass");
-            this.player.body.velocity.y = 500;
-        } else {
-            this.player.body.velocity.y--;
-        }
+    },
+    setupTextbox: function() {
+      var style = { font: "35px Arial", fill: "#ff0044", wordWrap: true, align: "center", backgroundColor: "#ffff00" };
 
+      this.text = game.add.text(300, 380, "Hello!!!", style);
+      this.text.anchor.set(0.5);
     }
 };
+
+// https://phaser.io/examples/v2/text/google-webfonts
+//WebFontConfig = {
+
+    //  'active' means all requested fonts have finished loading
+    //  We set a 1 second delay before calling 'createText'.
+    //  For some reason if we don't the browser cannot render the text the first time it's created.
+//    active: function() { game.time.events.add(Phaser.Timer.SECOND, createText, this); },
+
+    //  The Google Fonts we want to load (specify as many as you like in the array)
+//    google: {
+//      families: ['Revalia']
+//    }
+
+//};
