@@ -17,12 +17,13 @@ Template.Game.prototype = {
         this.player = this.game.add.sprite(400, 150, 'player');
         game.physics.enable(this.player, Phaser.Physics.ARCADE);
         this.player.body.collideWorldBounds = true;
-        this.textbox("HELLO!");
-        this.setupTextbox();
+        //this.textbox("HELLO!");
+        //this.setupTextbox();
 
         // add sprite sprite
-        this.sprite = this.game.add.sprite(500, 300, 'sprite');
-        this.sprite.scale.setTo(.25);
+        this.storebutton = game.add.button(260, 275, "sprite", this.updateText.bind(this), 2, 1, 0);
+        this.storebutton.scale.x = .25;
+        this.storebutton.scale.y = .25;
     },
     update: function() {
         const left = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
@@ -43,10 +44,13 @@ Template.Game.prototype = {
 
     },
     setupTextbox: function() {
-      var style = { font: "35px Arial", fill: "#ff0044", wordWrap: true, align: "center", backgroundColor: "#ffff00" };
+      var style = { font: "35px Arial", fill: "#ff0000", wordWrap: true, align: "center", backgroundColor: "#ffff00" };
 
       this.text = game.add.text(300, 380, "Hello!!!", style);
       this.text.anchor.set(0.5);
+    },
+    updateText: function() {
+      this.textbox(Math.random());
     }
 };
 
