@@ -24,6 +24,10 @@ Template.Game.prototype = {
         this.storebutton = game.add.button(260, 275, "sprite", this.updateText.bind(this), 2, 1, 0);
         this.storebutton.scale.x = .25;
         this.storebutton.scale.y = .25;
+
+        var Box = new ChatBox(game);
+        game.add.existing(Box);
+        Box.display("hi");
     },
     update: function() {
         const left = game.input.keyboard.isDown(Phaser.Keyboard.LEFT);
