@@ -28,7 +28,7 @@ Template.Boot.prototype = {
             this.scale.maxHeight = 1536;
             this.scale.forceLandscape = true;
             this.scale.pageAlignHorizontally= true;
-            this.scale.setScreenSize(true);
+            //this.scale.setScreenSize(true);
         }
         // this a all the game configurations
         // now begins the loading of the actual game assests
