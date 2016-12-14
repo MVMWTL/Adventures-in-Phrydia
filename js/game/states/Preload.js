@@ -17,8 +17,13 @@ Template.Preload.prototype = {
         this.load.image("background", "assets/images/backgrounds-3.jpg");
         this.load.image("settings", "assets/images/settings.png");
         this.load.image("start", "assets/images/startbutton.png");
-        this.load.image("store","assets/images/Storebutton.png");
-        this.load.image("chatbox", "assets/images/ChatBox.jpg")
+        this.load.image("store","assets/images/storebutton.png");
+        this.load.image("chatbox", "assets/images/ChatBox.jpg");
+        this.load.image("key", "assets/images/key.png");
+        this.load.image("paper", "assets/images/paper.png");
+        this.load.image("flower", "assets/images/flower2.png");
+        this.load.image("forest", "assets/images/forest.png");
+
 
 
     },
