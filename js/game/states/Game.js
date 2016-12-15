@@ -17,15 +17,15 @@ Template.Game.prototype = {
         //  this.storebutton = game.add.button(260, 275, "sprite", this.updateText.bind(this), 2, 1, 0);
         //this.storebutton.scale.x = .05;
         //this.storebutton.scale.y = .05;
-        this.paperbutton = this.game.add.button(50, 50, "paper", this.updateTextPaper, this, 2, 1, 0);
-        this.paperbutton.scale.setTo(.1);
+        this.paperbutton = this.game.add.button(0, 180, "paper", this.updateTextPaper, this, 2, 1, 0);
+        this.paperbutton.scale.setTo(.05);
         //this.storebutton.scale.x = .01;
         //this.storebutton.scale.y =;
         this.keybutton = this.game.add.button(150, 150, "key", this.updateTextKey,this, 2, 1, 0);
         this.keybutton.scale.setTo(.1);
         //this.storebutton.scale.x = .05;
         //this.storebutton.scale.y = .05;
-        this.flowerbutton = game.add.button(300, 50, "flower", this.updateTextFlower,this, 2, 1, 0);
+        this.flowerbutton = game.add.button(320, 225, "flower", this.updateTextFlower,this, 2, 1, 0);
         this.flowerbutton.scale.setTo(.1);
         //this.storebutton.scale.x = .05;
         //this.storebutton.scale.y = .05;
@@ -65,42 +65,42 @@ Template.Game.prototype = {
         this.text.anchor.set(0.5);
     }
     , updateTextPaper: function () {
-        this.updateDialouge("you have pressed map");
+        this.updateDialouge("you have found the map");
     }
     , updateTextFlower: function() {
         this.updateDialouge("You have obtained a petal from the universal rose");
         this.addPetal();
     }
-    
+
     , updateTextKey: function() {
         this.updateDialouge("The key is unreachable at the moment");
     }
 
     , initGui: function(){
-        
+
         var style = {
             font: "15px Arial"
             , fill: "#ff0000"
             , wordWrap: true
             , align: "center"
-           
+
         };
-        
+
         var y = 275
         var bitmapRect = this.add.bitmapData(this.game.width, this.game.height - y);
         bitmapRect.ctx.fillStyle = "#00048";
         bitmapRect.ctx.fillRect(0, 0, this.game.width, this.game.height - y);
-        // this sprite that will display it 
+        // this sprite that will display it
         this.panel = this.add.sprite(0, y, bitmapRect);
         this.panel.alpha = .5;
-        
+
         // dialouge texts
-        
+
         this.dialouge= this.game.add.text(0, y, "", style);
-        
+
     }
-    
-    
+
+
     , updateDialouge: function (input){
         this.dialouge.text = input;
     }
